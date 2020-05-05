@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Informe a nacionalidade: <input type="text" name="nacio" id="nacio">
+    <input type="button" value="Confirmar" onclick="confirma()">
+    <div id="res">
+
+    </div>
+    <script>
+        function confirma() {
+            var nacio = window.document.querySelector('input#nacio')
+            var res = window.document.querySelector('div#res')
+            if(nacio.value == 'Brasileiro') {
+                res.innerHTML = `Você é Brasileiro!`
+            } else {
+                res.innerHTML = `Você é Estrangeiro!`
+            }
+        }
+    </script>
+</body>
+</html>
