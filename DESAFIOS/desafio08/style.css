@@ -1,8 +1,8 @@
-body {
+body { /* body é uma tag html, entao quando à referenciamos dessa forma fazemos com que tudo dentro dessa tag tenha essas estilizações */
     display: inline-block;
 }
 
-.botao {
+.botao { /* no arquivo html botao é uma classe, então aqui referenciamos uma classe com o ponto, tudo que for da classe botao terá essas estilizações */
     margin: 2px;
     padding: 10px;
     border: medium;
@@ -10,6 +10,6 @@ body {
     background-color: #e4dede;
 }
 
-.botao:hover {
+.botao:hover { /* o hover significa a ação do mouse de passar por cima do que está sendo referenciado, aqui no caso o botao */
     background-color: #c4bbbb;
 }   

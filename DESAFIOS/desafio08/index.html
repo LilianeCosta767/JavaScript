@@ -4,20 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cálculo de Desconto</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!--Importa o arquivo css com as estilizações da página-->
 </head>
 <body>
     <section>
-        <div>
+        <div> <!--Semanticamente a primeira parte da pagina-->
             <h1>Calcular desconto</h1>
-            <input class="botao" type="button" value="Desconto de 10%" onclick="dados()">
+            <input class="botao" type="button" value="Desconto de 10%" onclick="dados()"> <!--Cria um botao, quando clicado vai para a função dados() presente no arquivo js-->
         </div>
-        <div id="res">
-            <select name="resultado" id="resultado">
-                <p id="paragrafo">Clique no botão acima para iniciar</p>
-            </select>
+        <div id="res"> <!--Semanticamente a segunda parte da pagina, contem o resultado-->
+            <p id="paragrafo">Clique no botão acima para iniciar</p>
         </div>
     </section>
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!--Importa o arquivo js com todas as funções javascripts da página-->
 </body>
 </html>
