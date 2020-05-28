@@ -1,0 +1,15 @@
+body {
+    display: inline-block;
+}
+
+.botao {
+    margin: 2px;
+    padding: 10px;
+    border: medium;
+    font-size: 14pt;
+    background-color: #e4dede;
+}
+
+.botao:hover {
+    background-color: #c4bbbb;
+}   
