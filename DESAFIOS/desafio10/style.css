@@ -1,0 +1,20 @@
+body {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.botao {
+    margin: 2px;
+    padding: 10px;
+    border: medium;
+    font-size: 14pt;
+    background-color: #e4dede;
+}
+
+.botao:hover {
+    background-color: #c4bbbb;
+}   
+
+b#delta {
+    background-color: #d1f56e;    
+}
