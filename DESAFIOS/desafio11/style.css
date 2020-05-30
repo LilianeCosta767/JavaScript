@@ -1,0 +1,24 @@
+body {
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.botao {
+    margin: 2px;
+    padding: 10px;
+    border: medium;
+    font-size: 14pt;
+    background-color: #e4dede;
+}
+
+.botao:hover {
+    background-color: #c4bbbb;
+} 
+
+b#f_bissexto {
+    background-color: #c92626;    
+}
+
+b#t_bissexto {
+    background-color: #2bc926;    
+}
