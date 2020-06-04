@@ -1,0 +1,21 @@
+div#calculadora {
+    background-color: teal;
+}
+
+div#visor {
+    background-color: yellow;
+}
+
+div#funcionalidades {
+    background-color: black;
+}
+
+div#numeros {
+    background-color: blue;
+    display: inline-block; /*aceita outros elementos ao lado dela*/
+}
+
+div#operacoes {
+    background-color: #8a2be2;
+    display: inline-block; /*aceita outros elementos ao lado dela*/
+}

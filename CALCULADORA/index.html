@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div id="calculadora">
+            <h1>Calculadora</h1>
+
+            <div id="visor">
+                <input type="text">
+            </div>
+
+            <div id="funcionalidade">
+                <div id="numeros">
+                    <div id="linha1">
+                        <input type="button" value="1" onclick="f_number(value)">
+                        <input type="button" value="2" onclick="f_number(value)">
+                        <input type="button" value="3" onclick="f_number(value)">
+                    </div>
+                    <div id="linha2">
+                        <input type="button" value="4" onclick="f_number(value)">
+                        <input type="button" value="5" onclick="f_number(value)">
+                        <input type="button" value="6" onclick="f_number(value)">
+                    </div>
+                    <div id="linha3">
+                        <input type="button" value="7" onclick="f_number(value)">
+                        <input type="button" value="8" onclick="f_number(value)">
+                        <input type="button" value="9" onclick="f_number(value)">
+                    </div>
+                    <div id="linha4">
+                        <input type="button" value="0" onclick="f_number(value)">
+                        <input type="button" value="X" onclick="clear_one()">
+                        <input type="button" value="=" onclick="f_operation(value)">
+                    </div>
+                </div>
+
+                <div id="operacoes">
+                    <div id="linha1">
+                        <input type="button" value="+" onclick="f_operation(value)">
+                        <input type="button" value="-" onclick="f_operation(value)">
+                    </div>
+                    <div id="linha2">
+                        <input type="button" value="*" onclick="f_operation(value)">
+                        <input type="button" value="/" onclick="f_operation(value)">
+                    </div>
+                    <div id="linha3">
+                        <input type="button" value="%" onclick="f_operation(value)">
+                        <input type="button" value="^" onclick="f_operation(value)">
+                    </div>
+                    <div id="linha4">
+                        <input type="button" value="&radic;" onclick="f_operation(value)">
+                        <input type="button" value="C" onclick="clear_all()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
