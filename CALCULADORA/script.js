@@ -1,13 +1,20 @@
+var visor = window.document.getElementById('visor')
+visor.innerHTML = ''
+
 var operation = ["", "", ""]
 number = ""
 var result
 
 function f_number(num) {
     number += num
-    console.log('number = ', number)
+    // console.log('number = ', number)
+    show_result(number)
 }
 
 function f_operation(op) {
+    if(op != "="){
+        show_result(op)
+    }
     // começando com um operador
     if (operation[0] == "" && number == "") {
         operation[0] = op
@@ -43,17 +50,14 @@ function f_operation(op) {
             console.log('operation = ', operation)
             make_account(op)
         }
+        show_result()
+        clear_all()
     }
-    // // quando aperta C
-    // else if(op == "C") {
-    //     clear_all()
-    // }
 }
 
 function make_account() {
     switch(operation[1]){
         case '%': 
-            // console.log('entrei aqui')
             result = operation[0] / 100
             console.log('result = ', result)
             break;
@@ -97,15 +101,19 @@ function make_account() {
 // }
 
 function clear_all () {
-    console.log('antes operation = ', operation)
     operation = ["", "", ""]
-    console.log('depois operation = ', operation)
+    number = ""
+    result = ""
 }
 
 function clear_one () {
-    // for(var i = 0; i < length(number) - 1; i++) {
-    //     number[i] = number[i]
-    // }
     number = number.substring(0,(number.length - 1));
     console.log('number = ', number)
+    show_result(number)
+}
+
+function show_result(imp) {
+    // visor.innerHTML = ''
+    // visor.innerHTML += `${operation[0]} ${operation[1]} ${operation[2]} `
+    visor.innerHTML += `${imp}`
 }
