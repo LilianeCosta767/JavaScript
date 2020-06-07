@@ -16,10 +16,10 @@ console.log('teste = ', exp[0])
 
 function insert_number(num) {
     // receber o primeiro numero, antes de um operador
-    if(exp[0] == undefined){
+    if(exp[0] == undefined || (exp[0] != undefined && exp[1] == undefined)){ // segunda condição para operação com primeira posição com operador
         numb1_vec.push(num)
         cont_numb1++
-        show_numb1_vec()
+        show_numb1_vec() // transforma o vetor em Number
     }
     // para receber o segundo numero após o operador
     else if (exp[1] != undefined) {
@@ -27,6 +27,10 @@ function insert_number(num) {
         cont_numb2++
         show_numb2_vec()
     }
+    // operação com primeira posição com operador
+    // else if (exp[0] != undefined && exp[1] == undefined) {
+
+    // }
 }
 
 function insert_operator(op) {
@@ -38,14 +42,27 @@ function insert_operator(op) {
         console.log('exp = ', exp)
     }
 
-    // verificação do operador =
+    // verificação do operador = com posição 1 oculpada e vetor numb2_vec ocupado
     if (exp[1] != undefined && numb2_vec.length != 0 && op == "=") {
         console.log('antes do numb2, exp = ', exp)
         exp.push(numb2)
         console.log('depois do numb2, exp = ', exp)
         show_exp()
+        make_account()
     }
 
+    // preenche a primeira posição do vetor exp com um operador
+    if (exp[0] == undefined) {
+        exp.push(op)
+    }
+
+    // adicionar o valor numerico depois do operador na expressão iniciada com um operador
+    if (op == "=" && numb1_vec.length != 0 && exp[1] == undefined) {
+        exp.push(numb1)
+        make_account()
+    }
+
+    // quando a posição 1 do exp tá livre
     if (op == "=") {
         make_account()
     }
@@ -100,5 +117,14 @@ function make_account () {
             resul = Math.pow(exp[0], exp[2])
             console.log('resultado = ', resul)
             break;
+        case "%":
+            resul = exp[0] / 100
+            console.log('resultado = ', resul)
+            break;
+        default:
+            if(exp[0] == "√") {
+                resul = Math.sqrt(exp[1])
+                console.log('resultado = ', resul)
+            }
     }
 }
