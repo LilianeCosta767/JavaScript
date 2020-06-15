@@ -1,4 +1,5 @@
 var visor = window.document.getElementById('visor')
+visor.innerHTML = ''
 
 var numb1_vec = []
 var numb1
@@ -10,22 +11,19 @@ var cont_numb2 = 0
 
 var exp = []
 var resul
-visor.innerHTML = ''
-
-console.log('teste = ', exp[0])
 
 function insert_number(num) {
     // receber o primeiro numero, antes de um operador
     if(exp[0] == undefined || (exp[0] != undefined && exp[1] == undefined)){ // segunda condição para operação com primeira posição com operador
         numb1_vec.push(num)
         cont_numb1++
-        show_numb1_vec() // transforma o vetor em Number
+        change_numb1_vec() // transforma o vetor em Number
     }
     // para receber o segundo numero após o operador
     else if (exp[1] != undefined) {
         numb2_vec.push(num)
         cont_numb2++
-        show_numb2_vec()
+        change_numb2_vec()
     }
     // operação com primeira posição com operador
     // else if (exp[0] != undefined && exp[1] == undefined) {
@@ -68,16 +66,17 @@ function insert_operator(op) {
     }
 }
 
-function show_numb1_vec () {
+function change_numb1_vec () {
     var texto = ""
     for (var i = 0; i < cont_numb1; i++){
         texto += numb1_vec[i] + ""
     }
     numb1 = Number(texto)
+    
     // console.log('numb1 = ', texto)
 }
 
-function show_numb2_vec () {
+function change_numb2_vec () {
     var texto = ""
     for (var i = 0; i < cont_numb2; i++){
         texto += numb2_vec[i] + ""
